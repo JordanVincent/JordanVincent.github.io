@@ -1,0 +1,407 @@
+@charset "utf-8";
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-color: #999999;
+}
+ #container {
+	width: 780px;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 4px solid #D09813;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	background-color: #FFFFFF;
+} 
+ #header {
+	background-color: #FFFFFF;/*	padding: 0 10px 0 20px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	
+} 
+ #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 0px;  /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+/* add the following code for the navigation bar */
+
+#nav {
+	margin:0;
+	padding:0;
+	background:#C40F09;
+	float:left;
+	width:100%;
+	border:0px solid #FFFFFF; 
+}
+#nav ul {
+	/*	line-height:125%; */ 
+	list-style-type:none;
+	display:inline;
+	overflow:hidden;
+	padding-left: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;	
+}
+#nav li {
+	float:left;   /* keeps nav bar at proper height */
+	width: auto;  /* not sure this does anything */
+}
+#nav li a {
+	color:#FFFFFF;
+	background:#C40F09;
+	float:left; /* effects nav bar hieght */
+	width:auto;  /* not sure this does anything */
+	text-decoration:none;
+	padding-top: 8px;
+	padding-right: 12px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	/*	display: block; */
+}
+
+#nav a:link, #nav a:visited {
+	background:#C40F09;
+}
+/*#nav a:hover, a:active {  */
+#nav a:hover {
+	background:#D09813;
+}
+#home #nav-home a {
+	background: #D09813;
+	}
+#spiritual #nav-spiritual a {
+	background: #D09813;
+	}
+#mobility #nav-mobility a {
+	background: #D09813;
+	}
+
+#guardianship #nav-guardianship a {
+	background: #D09813;
+	}
+#events #nav-events a {
+	background: #D09813;
+	}
+ 
+#sidebar1 {
+	float: left; /* since this element is floated, a width must be given */
+	width: 180px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	background-color: #FFFFFF;
+}
+#sidebar1 h3, #sidebar1 p {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+	/*padding-top: 1em;*/ /*	color: #333333;     */
+} 
+
+/*  #nav li:first-child a {border-left:1px solid #FFFFFF;}  */
+ 
+/*add code for rollover side navigation bar */
+
+#side-nav {
+	width:100%;
+	overflow: hidden;
+}
+#side-nav ul
+{
+	margin-left:0; 
+	margin-top:0; 
+	margin-bottom:0; 
+	padding-left:10px;
+	list-style-type:none;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 125%;
+	font-weight: bold;
+}
+#side-nav a
+{
+	display:block;
+	padding: 3px;
+	width: 160px;
+	background-color:#210B7D;
+	border-bottom: 1px solid #eee;
+}
+#side-nav a:link, #side-nav a:visited
+{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+#side-nav a:hover 
+{
+	background-color:#D09813;
+	color: #fff;
+}
+
+/*add code for rollover side navigation bar DONATE & make header red */
+#side-nav-donate h1 {color:#C40F09}
+#side-nav-donate {width:100%;}
+#side-nav-donate ul
+{
+	margin-left:0;
+	margin-top:0;
+	margin-bottom:0;
+	padding-left:10px;
+	list-style-type:none;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 125%;
+	font-weight: bold;
+}
+#side-nav-donate a
+{
+	display:block;
+	padding: 3px;
+	width: 160px;
+	background-color:#C40F09;
+	border-bottom: 1px solid #eee;
+}
+#side-nav-donate a:link, #side-nav-donate a:visited
+{
+color:#eee;
+text-decoration:none;
+}
+#side-nav-donate a:hover
+{
+	background-color:#D09813;
+	color: #fff;
+}
+#volunteer #side-nav-volunteer a, 
+#donation #side-nav-money a, 
+#moblity #side-nav-wheelchairs a 
+{
+	background: #D09813;
+	color:#FFFFFF;
+}
+ #mainContent {
+	border-left-width: medium;
+	border-left-style: solid;
+	border-left-color: #C40F09; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 200px;
+	padding-top: 0;
+	padding-right: 15px;
+	padding-bottom: 0;
+	padding-left: 15px;
+} 
+ #footer {
+	/*padding: 0 10px 0 20px; */
+	background-color: #999999;
+	clear:both;
+} 
+ #footer p {
+	margin: 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-right: 0;
+	padding-bottom: 5px;
+	padding-left: 0;
+}
+.bordered-textbox {
+	border: 3px solid #D09813;
+	padding: 10px;
+	width: 380px;
+	margin: 5px 0px 5px 60px;
+}
+.blue-border { 
+	border: 3px solid #210B7D;
+	}
+.bullet_list {
+	list-style-position: outside;
+	list-style-type: disc;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: normal;
+	font-variant: normal;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.bullet_list_benefit_dinner {
+	list-style-position: inside;
+	list-style-type: disc;
+	color: #210B7D;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: normal;
+	font-variant: normal;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-indent: 1.5in;
+	text-align: left;
+	display: list-item;
+}
+
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.fltlft-blue { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+	border: 3px solid #210B7D;
+}
+.fltlft-gold { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+	border: 3px solid #D09813;
+}
+.fltlft-red { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+	border: 3px solid #C40F09;
+}
+
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltrt-blue { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+	border: 3px solid #210B7D;
+}
+.fltrt-gold { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+	border: 3px solid #D09813;
+}
+.fltrt-red { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+	border: 3px solid #C40F09;
+}
+.logo-left-margin {
+margin-left:15px;
+}
+.blue-text {
+color:#210B7D;
+}
+.centertext {
+text-align:center;
+}
+.gold-background {
+	background-color: #D09813;
+}
+.gold-text {
+color:#D09813;
+}
+.red-text {
+color:#C40F09;
+}
+.p-indent {
+	color: #333333;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	text-indent: 25px;
+}
+.p-mission {
+	color: #333333;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 125%;
+}
+.p-heading {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #210B7D;
+}
+
+.large-font {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+.benefit_dinner {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.x-large-font {
+	font: italic bold 18px Verdana, Geneva, sans-serif;
+	color: #333333;
+}
+
+
+p {
+	color: #333333;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+h1 {
+/*	font-family: Impact, "Arial Narrow", sans-serif;
+	font-size: 180%;
+	font-weight: normal;
+	color: #210B7D;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	word-spacing: 5px; */
+/*	border-bottom-width: 1px;
+	border-bottom-style: none; */
+/*	border-bottom-color: #D09813;
+	font-variant: small-caps; */
+	margin-top: 0px;
+/*	margin-bottom: 0px; */
+}
+
+h2 {
+	color: #C40F09;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 150%;
+	font-weight: bold;
+	border-bottom-style: none;
+	margin-top: 0px; 
+/*	margin-bottom: 0px; */
+}
+h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 130%;
+	color: #210B7D;
+	border-bottom-style: none;
+	border-bottom-color: #999999;
+	margin-top: 0px;  
+/*	margin-bottom: 0px; */
+}
+a:link {
+	color: #210B7D;
+}
+a:visited {
+	color: #C40F09;
+}
+a:hover {
+	color: #D09813;
+}
+.gold-line {
+	width: 100%;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #D09813;
+}
