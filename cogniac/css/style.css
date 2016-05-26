@@ -1,0 +1,151 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+#detections-page {
+  display: none;
+  height: 100%;
+  position: absolute;
+}
+
+.detections-page-inner {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#detections-page .toolbar{
+  height: 100%;
+  width: 200px;
+  padding: 20px;
+  background: #eee;
+}
+
+#detections-page .filters span{
+  padding: 0px 10px;
+  margin-right: 5px;
+  border-radius: 100px;
+  background-color: #888;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#detections-page .filters p{
+  margin-bottom: 0
+  font-size: 14px;
+}
+
+#detections-page .list{
+  height: 100%;
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+}
+
+#detections-list{
+}
+
+.detection {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 10px 10px 0;
+  vertical-align: top;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.detection img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* vertical align trick */
+.detection .helper {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.detection .meta{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 0px 10px;
+  border-radius: 100px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.32);
+  background-color: #ccc;
+  color: white;
+  font-size: 14px;
+}
+
+.detection .meta.low {
+  background-color: #C51F13;
+}
+
+.detection .meta.medium {
+  background-color: #FF5722;
+}
+
+.detection .meta.high {
+  background-color: #009688;
+}
+
+#login form {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 100px auto;
+  border-radius: 2px;
+}
+
+#login h1 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1;
+}
+
+#login input {
+  display: block;
+  width: 170px;;
+  border-radius: 2px;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#login button {
+  display: block;
+  border-radius: 2px;
+  background: #009688;
+  padding: 8px 15px;
+  font-weight: 600;
+  color: white;
+  border: 0;
+  float: right;
+  cursor: pointer;
+}
+
+.clearfix{
+  clear: both;
+}
+
+#loading {
+  display: none;
+  font-style: italic;
+  text-align: center;
+  margin: 40px 0;
+  color: #888;
+}

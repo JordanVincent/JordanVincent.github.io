@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cogniac</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="loading">
+        Loading...
+      </div>
+    <div id="login">
+
+      <form>
+        <h1>Soda Can Detection</h1>
+        <input type="email" id="input-email" placeholder="Email" value="coding_project@cogniac.co"></input>
+        <input type="password" id="input-password" placeholder="Password" value="CogniacProject123"></input>
+        <button type="submit">Login</button>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+    <div id="detections-page">
+      <div class="detections-page-inner">
+        <div class="list">
+          <div id="detections-list" >
+          </div>
+        </div>
+        <div class="toolbar">
+          <p>Tags</p>
+          <div class="filters">
+            <span>CocaCola</span>
+            <span>Pepsi</span>
+            <span>MountainDew</span>
+          </div>
+          <p>Confidence</p>
+          <div class="filters">
+            <span class="low">Low</span>
+            <span class="medium">Medium</span>
+            <span class="high">High</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" type="text/javascript"></script>
+    <script type='text/javascript' src='https://cogniac.co/js/cogniac.js'></script>
+    <script type='text/javascript' src='js/application.js'></script>
+  </body>
+</html>
