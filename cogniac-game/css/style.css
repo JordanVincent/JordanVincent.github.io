@@ -1,0 +1,352 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.btn {
+  color: white;
+  border-radius: 2px;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #18CD81;
+  border: 1px solid #28E695;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-secondary {
+  background: #bbb;
+  border: 1px solid #bbb;
+}
+
+.btn-center {
+  margin: 0 auto;
+  width: 200px;
+  border-radius: 2px;
+}
+
+.btn-primary:hover {
+  box-shadow: none;
+}
+
+section {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#game-selection {
+  background: #002040;
+  color: white;
+}
+
+#game-selection .game {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+}
+
+#game-selection .game-img {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin: 10px auto 10px auto;
+  background: white;
+  box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+#game-selection .section-top{
+  background: #001020;
+  font-size: 1.2em;
+  padding: 15px 20px;
+}
+
+#game-selection .section-main{
+  padding: 40px 20px;
+}
+
+#game-description {
+  color: white;
+  background: #002040;
+}
+
+#game-description h3 {
+  color: #FFD24D;
+  margin: 40px 0 5px 0;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+#game-description h1 {
+  font-weight: 300;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#game-description .instructions {
+  margin-top: 0;
+}
+
+.section-inner {
+  padding: 40px;
+}
+
+.section-main {
+  flex: 1;
+}
+
+.section-top {
+  padding: 10px;
+}
+
+#game-running {
+  background: #002040;
+}
+
+#game-running .image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#game-running .images-wrapper {
+  overflow: hidden;
+  height: 100%;
+  padding: 0 5px;
+  position: relative;
+}
+
+#game-running .images-container {
+  position: absolute;
+  width: 100%;
+}
+
+#game-running .images-container .img {
+  display: inline-block;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border: 4px solid white;
+  border-radius: 2px;
+  margin: 2.5px 5px;
+  transition: border 0.2s;
+  position: relative;
+}
+
+#game-running .images-container .img:before {
+  background-color: #18CD81;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transition: opacity 0.2s;
+}
+
+#game-running .images-container .img.active {
+  border-color: #18CD81;
+}
+
+#game-running .images-container .img.active:before {
+  opacity: 0.5;
+}
+
+#game-running .image-container {
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+  transition: height .2s, width .2s;
+  overflow: hidden;
+}
+
+#game-running .image-container .img {
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#game-running .info {
+  height: 30px;
+  padding: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  display: flex;
+}
+
+#game-running .progress {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+#game-running .progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+#game-running .progress-inner {
+  width: 60%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #FFD24D;
+}
+
+#game-running .info .heart {
+  height: 16px;
+  display: inline-block;
+  margin: 5px 0 0 0;
+}
+
+#game-running .info .heart.lost {
+  opacity: 0.5;
+}
+
+#game-running .info .score {
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+  min-width: 80px;
+}
+
+#game-running .info .score .bonus div {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+#game-running .card {
+  background-color: white;
+  bottom: -350px;
+  position: absolute;
+  width: 100%;
+  color: #333;
+  transition: bottom .2s;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+#game-running .popup {
+  background-color: white;
+  position: absolute;
+  width: 50%;
+  color: #333;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  top: 200px;
+  left: 25%;
+  text-align: center;
+  display: none;
+}
+
+#game-running .popup p {
+  color: #FFD24D;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+#game-running h1 {
+  font-weight: 400;
+  margin: 0;
+}
+
+#game-running .overlay {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.3;
+  display: none;
+}
+
+#game-running .card h2{
+  font-weight: 600;
+  margin-top: 0;
+}
+
+#game-running .card .section-inner.card-btns{
+  padding-top: 0;
+  display: flex;
+}
+
+#game-running .card .btn {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#game-running .card .btn:last-child {
+  margin-right: 0;
+}
+
+#game-end {
+  color: white;
+  background: #002040;
+}
+
+#game-end h1 {
+  font-weight: 300;
+  font-size: 3em;
+  text-align: center;
+}
+
+#game-end .score {
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+  color: #FFD24D;
+}
+
+#game-end .best-score {
+  text-align: center;
+  opacity: 0.7;
+}
+
+#game-end .description div {
+  margin-bottom: 10px;
+}
+
+#game-end .description .lives:before, #game-end .description .corrections:before {
+  content: '';
+  background-image: url('../img/heart-icon-gold.png');
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  display: inline-block;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+#game-end .description .corrections:before {
+  background-image: url('../img/check-icon-gold.png');
+}
+
+.separator{
+  background-color: #FFD24D;
+  height: 2px;
+  width: 60px;
+  margin: 60px auto;
+}
+
+.btn-inline {
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
